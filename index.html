@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Houzeo UI – Homes for Sale</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <!-- MOBILE HEADER -->
+      <div class="headerMobile">
+        <button class="menuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="logo">Houzeo</div>
+
+        <button class="profileBtn">
+          <i class="fa-regular fa-user"></i>
+        </button>
+      </div>
+
+      <div class="headerDesktop">
+        <div class="headerLeft">
+          <div class="logo">Houzeo</div>
+        </div>
+
+
+
+        <div class="headerRight">
+                  <ul class="nav">
+          <li>
+            <a href="#">
+              Product
+              <span class="dropIcon"
+                ><i class="fa-solid fa-caret-down"></i
+              ></span>
+            </a>
+            <div class="dropdown">
+              <div class="option">For Sale</div>
+              <div class="option">Sold</div>
+            </div>
+          </li>
+          <li>
+            <a>How Houzeo Work</a>
+          </li>
+
+          <li>
+            <a>Reviews</span></a>
+          </li>
+          <li>
+            <a
+              >Buy
+              <span class="dropIcon"
+                ><i class="fa-solid fa-caret-down"></i></span
+            ></a>
+          </li>
+          <li>
+            <a
+              >Sell
+              <span class="dropIcon"
+                ><i class="fa-solid fa-caret-down"></i></span
+            ></a>
+          </li>
+          <li>
+            <a>Pricing</a>
+          </li>
+          <li>
+            <a
+              >Resources
+              <span class="dropIcon"
+                ><i class="fa-solid fa-caret-down"></i></span
+            ></a>
+          </li>
+                    <li>
+            <a>SignIn</a>
+          </li>
+        </ul>
+          <div class="support">
+            <span>(844) 448-0110</span>
+            <small>(9am to 6pm CST, Mon-Sat)</small>
+          </div>
+        
+          <button class="cta">Start Free Listing</button>
+        </div>
+      </div>
+    </header>
+    <!-- MOBILE NAV OVERLAY -->
+    <div class="mobileNavOverlay"></div>
+
+    <!-- MOBILE NAV DRAWER -->
+    <div class="mobileNav">
+      <button class="closeMenu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <ul class="mobileNavLinks">
+        <li>
+          <a>Product</a>
+        </li>
+
+        <li><a>How Houzeo Works</a></li>
+        <li><a>Reviews</a></li>
+        <li><a>Buy</a></li>
+        <li><a>Sell</a></li>
+        <li><a>Pricing</a></li>
+        <li><a>Resources</a></li>
+      </ul>
+    </div>
+
+    <!-- FILTER BAR -->
+    <section>
+      <ul class="filters">
+        <li class="filterBtn searchBox active">
+          <button>
+            Austin, TX
+            <span class="searchBtn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+          </button>
+        </li>
+        <li class="filterBtn hasDropdown">
+          <button type="button" class="filterToggle">
+            <span class="btnTxt">For Sale</span>
+            <span class="dropIcon"><i class="fa-solid fa-caret-down"></i></span>
+          </button>
+
+          <div class="dropdown">
+            <div class="option">For Sale</div>
+            <div class="option">Sold</div>
+          </div>
+        </li>
+
+        <li class="filterBtn hasDropdown">
+          <button type="button" class="filterToggle">
+            <span class="btnTxt">Price</span>
+            <span class="dropIcon"><i class="fa-solid fa-caret-down"></i></span>
+          </button>
+
+          <div class="dropdown">
+            <div class="option">$0 – $250k</div>
+            <div class="option">$250k – $500k</div>
+            <div class="option">$500k – $1M</div>
+            <div class="option">$1M+</div>
+          </div>
+        </li>
+
+        <li class="filterBtn">
+          <button>
+            <span class="btnTxt">Beds & Baths</span>
+            <span class="dropIcon"><i class="fa-solid fa-caret-down"></i></span>
+          </button>
+        </li>
+        <li class="filterBtn">
+          <button>
+            <span class="btnTxt">Property Type</span>
+            <span class="dropIcon"><i class="fa-solid fa-caret-down"></i></span>
+          </button>
+        </li>
+        <li class="filterBtn">
+          <button>
+            <span class="icon"><i class="fa-solid fa-sliders"></i></span>
+            <span class="btnTxt">Filters</span>
+          </button>
+        </li>
+        <li class="filterBtn">
+          <button>
+            <span class="icon"><i class="fa-regular fa-bookmark"></i></span>
+            <span class="btnTxt">Saved</span>
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <!-- MAIN -->
+    <main class="layout">
+      <!-- MAP -->
+      <section class="map">
+        <iframe
+          src="https://www.google.com/maps?q=Austin,TX&z=11&output=embed"
+          loading="lazy"
+        >
+        </iframe>
+      </section>
+      <!-- <section class="map">
+        <div id="map"></div>
+      </section> -->
+
+      <!-- LISTINGS -->
+      <section class="listings">
+        <h2>Austin, TX real estate & homes for sale</h2>
+        <div class="countSort">
+          <span class="count">2,010 Homes</span>
+          <div class="sort">
+            <span>Sort by:</span>
+            <button>
+              New Listing <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+        </div>
+        <div class="listingCards">
+          <!-- CARDS -->
+          <div class="property-card">
+            <div class="carousel">
+              <div class="track">
+                <img src="assets/1.png" />
+                <img src="assets/2.png" />
+                <img src="assets/3.png" />
+                <img src="assets/4.png" />
+              </div>
+
+              <span class="pill">6 days on Houzeo</span>
+              <i class="fa-regular fa-heart like"></i>
+
+              <div class="dots"></div>
+
+              <button class="cardArr prev"><i class="fa-solid fa-chevron-left"></i></button>
+              <button class="cardArr next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="details">
+              <div class="top-row">
+                <span class="type"
+                  ><span class="dot"></span> House For Sale</span
+                >
+                <span class="views"
+                  ><i class="fa-regular fa-eye"></i> 2.3k</span
+                >
+              </div>
+
+              <div class="price">
+                $3,349,000
+                <ul class="roomDetail">
+                  <li><span>4</span> Beds</li>
+                  <li><span>3</span> Baths</li>
+                  <li><span>998</span> sqft</li>
+                </ul>
+              </div>
+
+              <p class="address">
+                <b>2856 Meadow Park Ave</b>, Henderson, NV 89052
+              </p>
+
+              <p class="broker">
+                Nashville (Real Tracs Mid) MLS-TN as distributed by MLS GRID
+              </p>
+            </div>
+          </div>
+          <div class="property-card">
+            <div class="carousel">
+              <div class="track">
+                <img src="assets/1.png" />
+                <img src="assets/2.png" />
+                <img src="assets/3.png" />
+                <img src="assets/4.png" />
+              </div>
+
+              <span class="pill">6 days on Houzeo</span>
+              <i class="fa-regular fa-heart like"></i>
+
+              <div class="dots"></div>
+
+              <button class="cardArr prev"><i class="fa-solid fa-chevron-left"></i></button>
+              <button class="cardArr next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="details">
+              <div class="top-row">
+                <span class="type"
+                  ><span class="dot"></span> House For Sale</span
+                >
+                <span class="views"
+                  ><i class="fa-regular fa-eye"></i> 2.3k</span
+                >
+              </div>
+
+              <div class="price">
+                $3,349,000
+                <ul class="roomDetail">
+                  <li><span>4</span> Beds</li>
+                  <li><span>3</span> Baths</li>
+                  <li><span>998</span> sqft</li>
+                </ul>
+              </div>
+
+              <p class="address">
+                <b>2856 Meadow Park Ave</b>, Henderson, NV 89052
+              </p>
+
+              <p class="broker">
+                Nashville (Real Tracs Mid) MLS-TN as distributed by MLS GRID
+              </p>
+            </div>
+          </div>
+          <div class="property-card">
+            <div class="carousel">
+              <div class="track">
+                <img src="assets/1.png" />
+                <img src="assets/2.png" />
+                <img src="assets/3.png" />
+                <img src="assets/4.png" />
+              </div>
+
+              <span class="pill">6 days on Houzeo</span>
+              <i class="fa-regular fa-heart like"></i>
+
+              <div class="dots"></div>
+
+              <button class="cardArr prev"><i class="fa-solid fa-chevron-left"></i></button>
+              <button class="cardArr next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="details">
+              <div class="top-row">
+                <span class="type"
+                  ><span class="dot"></span> House For Sale</span
+                >
+                <span class="views"
+                  ><i class="fa-regular fa-eye"></i> 2.3k</span
+                >
+              </div>
+
+              <div class="price">
+                $3,349,000
+                <ul class="roomDetail">
+                  <li><span>4</span> Beds</li>
+                  <li><span>3</span> Baths</li>
+                  <li><span>998</span> sqft</li>
+                </ul>
+              </div>
+
+              <p class="address">
+                <b>2856 Meadow Park Ave</b>, Henderson, NV 89052
+              </p>
+
+              <p class="broker">
+                Nashville (Real Tracs Mid) MLS-TN as distributed by MLS GRID
+              </p>
+            </div>
+          </div>
+          <div class="property-card">
+            <div class="carousel">
+              <div class="track">
+                <img src="assets/1.png" />
+                <img src="assets/2.png" />
+                <img src="assets/3.png" />
+                <img src="assets/4.png" />
+              </div>
+
+              <span class="pill">6 days on Houzeo</span>
+              <i class="fa-regular fa-heart like"></i>
+
+              <div class="dots"></div>
+
+              <button class="cardArr prev"><i class="fa-solid fa-chevron-left"></i></button>
+              <button class="cardArr next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="details">
+              <div class="top-row">
+                <span class="type"
+                  ><span class="dot"></span> House For Sale</span
+                >
+                <span class="views"
+                  ><i class="fa-regular fa-eye"></i> 2.3k</span
+                >
+              </div>
+
+              <div class="price">
+                $3,349,000
+                <ul class="roomDetail">
+                  <li><span>4</span> Beds</li>
+                  <li><span>3</span> Baths</li>
+                  <li><span>998</span> sqft</li>
+                </ul>
+              </div>
+
+              <p class="address">
+                <b>2856 Meadow Park Ave</b>, Henderson, NV 89052
+              </p>
+
+              <p class="broker">
+                Nashville (Real Tracs Mid) MLS-TN as distributed by MLS GRID
+              </p>
+            </div>
+          </div>
+          <div class="property-card">
+            <div class="carousel">
+              <div class="track">
+                <img src="assets/1.png" />
+                <img src="assets/2.png" />
+                <img src="assets/3.png" />
+                <img src="assets/4.png" />
+              </div>
+
+              <span class="pill">6 days on Houzeo</span>
+              <i class="fa-regular fa-heart like"></i>
+
+              <div class="dots"></div>
+
+              <button class="cardArr prev"><i class="fa-solid fa-chevron-left"></i></button>
+              <button class="cardArr next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="details">
+              <div class="top-row">
+                <span class="type"
+                  ><span class="dot"></span> House For Sale</span
+                >
+                <span class="views"
+                  ><i class="fa-regular fa-eye"></i> 2.3k</span
+                >
+              </div>
+
+              <div class="price">
+                $3,349,000
+                <ul class="roomDetail">
+                  <li><span>4</span> Beds</li>
+                  <li><span>3</span> Baths</li>
+                  <li><span>998</span> sqft</li>
+                </ul>
+              </div>
+
+              <p class="address">
+                <b>2856 Meadow Park Ave</b>, Henderson, NV 89052
+              </p>
+
+              <p class="broker">
+                Nashville (Real Tracs Mid) MLS-TN as distributed by MLS GRID
+              </p>
+            </div>
+          </div>
+          <div class="property-card">
+            <div class="carousel">
+              <div class="track">
+                <img src="assets/1.png" />
+                <img src="assets/2.png" />
+                <img src="assets/3.png" />
+                <img src="assets/4.png" />
+              </div>
+
+              <span class="pill">6 days on Houzeo</span>
+              <i class="fa-regular fa-heart like"></i>
+
+              <div class="dots"></div>
+
+              <button class="cardArr prev"><i class="fa-solid fa-chevron-left"></i></button>
+              <button class="cardArr next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="details">
+              <div class="top-row">
+                <span class="type"
+                  ><span class="dot"></span> House For Sale</span
+                >
+                <span class="views"
+                  ><i class="fa-regular fa-eye"></i> 2.3k</span
+                >
+              </div>
+
+              <div class="price">
+                $3,349,000
+                <ul class="roomDetail">
+                  <li><span>4</span> Beds</li>
+                  <li><span>3</span> Baths</li>
+                  <li><span>998</span> sqft</li>
+                </ul>
+              </div>
+
+              <p class="address">
+                <b>2856 Meadow Park Ave</b>, Henderson, NV 89052
+              </p>
+
+              <p class="broker">
+                Nashville (Real Tracs Mid) MLS-TN as distributed by MLS GRID
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
